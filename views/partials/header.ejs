@@ -12,9 +12,18 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <div class="w-full px-10 py-3 flex justify-between">
+    <% if(nav === true){ %>
+    <div
+      class="w-full px-10 py-3 flex justify-between bg-zinc-800 text-white items-center"
+    >
       <h3>PicHive</h3>
-      <div><a href="/">profile</a><a href="#">logout</a><a href=""></a></div>
+      <div class="flex gap-10 items-center">
+        <a href="/">Profile</a><a href="#">Feed</a
+        ><a class="px-3 py-2 bg-red-700 text-white rounded-lg" href="/logout"
+          >Logout</a
+        >
+      </div>
     </div>
+    <% } %>
   </body>
 </html>
