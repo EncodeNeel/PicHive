@@ -23,6 +23,12 @@ router.get("/profile", isLoggedIn, async function (req, res, next) {
     .populate("posts");
   res.render("profile", { user, nav: true });
 });
+router.get("/show/posts", isLoggedIn, async function (req, res, next) {
+  const user = await userModel
+    .findOne({ username: req.session.passport.user })
+    .populate("posts");
+  res.render("show", { user, nav: true });
+});
 
 router.get("/add", isLoggedIn, function (req, res, next) {
   res.render("add", { nav: true });
