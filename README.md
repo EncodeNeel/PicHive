@@ -1,4 +1,4 @@
-# Pic Hive
+# PicHive
 
 Pic Hive is a web application that allows users to register, login, create posts with images, and view a feed of all posts. It uses Express.js for the server, MongoDB for the database, Passport.js for authentication, and Multer for file uploads.
 
