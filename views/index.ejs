@@ -1,47 +1,44 @@
 <% include ./partials/header.ejs %>
 
 <div
-  class="w-full h-screen bg-center bg-cover bg-[url(https://plus.unsplash.com/premium_photo-1668671069358-31e503a9a4d8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YWJzdHJhY3QlMjB5ZWxsb3d8ZW58MHx8MHx8fDA%3D)] flex items-center justify-center"
+  class="min-h-screen flex items-center justify-center bg-center bg-cover bg-[url('https://plus.unsplash.com/premium_photo-1668671069358-31e503a9a4d8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YWJzdHJhY3QlMjB5ZWxsb3d8ZW58MHx8MHx8fDA%3D')]"
 >
-  <div class="w-[25vw] bg-white px-20 py-10 rounded-[30px]">
-    <h1
-      class="text-3xl text-center font-semibold text-zinc-700 tracking-tighter capitalize leading-none"
-    >
+  <div class="max-w-md w-full bg-white p-8 rounded-lg shadow-lg">
+    <h1 class="text-3xl text-center font-semibold text-gray-800 mb-6">
       Welcome to PicHive
     </h1>
-    <form action="/login" method="post">
+    <form action="/login" method="post" class="space-y-4">
       <input
-        class="border-2 rounded-md block mt-2 w-full px-3 py-2"
+        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         type="text"
         name="username"
-        placeholder="username"
+        placeholder="Username"
+        required
       />
       <input
-        class="border-2 rounded-md block mt-2 w-full px-3 py-2"
+        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         type="password"
         name="password"
-        placeholder="password"
+        placeholder="Password"
+        required
       />
-      <a class="mt-2 font-semibold text-zinc-500 inline-block" href="#"
-        >Forgot password ?</a
-      >
-      <input
-        class="border-2 rounded-full block mt-2 w-full px-3 py-2 bg-red-600 text-white rounded-full"
+      <a class="text-blue-500 text-sm" href="#">Forgot password?</a>
+      <button
+        class="w-full py-2 px-4 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700 transition duration-200"
         type="submit"
-        value="Login"
-      />
-      <p
-        class="text-xs font-semibold text-zinc-700 mt-7 w-3/4 mx-auto text-center"
       >
-        By continuing, you agree to Pinterest's Terms of Service; Opens a new
-        tab and acknowledge you've read our Privacy Policy Notice at collection
+        Login
+      </button>
+      <p class="text-xs text-center text-gray-500 mt-4">
+        By continuing, you agree to Pinterest's Terms of Service and acknowledge
+        you've read our Privacy Policy.
       </p>
     </form>
-    <a
-      class="inline-block mt-7 text-sm font-semibold text-zinc-700 text-center w-full"
-      href="/register"
-      >Dont have an account ?</a
-    >
+    <p class="text-center text-sm text-gray-600 mt-6">
+      Don't have an account?
+      <a class="text-blue-500 font-semibold" href="/register">Sign up</a>
+    </p>
   </div>
 </div>
+
 <% include ./partials/footer.ejs %>
